@@ -1,0 +1,81 @@
+@use "../foundation/mixin";
+@use "../foundation/color";
+@use "../foundation/font";
+@use "sass:math";
+
+// カンパニーページーーー
+.page-company img{
+  width: 168px;
+  position: absolute;
+  top: 28px;
+  right:76px;
+  @include mixin.mq("sp") {
+    width: 64px;
+    top: 28px;
+    right:16px;
+  }
+}
+
+.company_bg{
+  background-image: url(/images/company.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(/images/mobile_company.jpg);
+  }
+}
+
+.access img{
+  width: 156px;
+  position: absolute;
+  top: 24px;
+  right: 76px;
+  @include mixin.mq("sp") {
+    width: 70px;
+    top: 24px;
+    right:16px;
+  }
+}
+
+$dt: 120px;
+
+.page-company dl{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  dt{
+    width: 120px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 8px;
+  }
+  dd{
+    width: calc(100% - #{$dt} );
+    margin-bottom: 16px;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 8px;
+  }
+}
+
+dl dt.address_p{
+  @include mixin.mq("sp") {
+    padding-bottom: 40px;
+  }
+}
+dl dt.content_p{
+  @include mixin.mq("sp") {
+    padding-bottom: 72px;
+  }
+}
+.pc-map{
+  @include mixin.mq("sp") {
+    display: none;
+  }
+}
+
+.mobile-map{
+  @include mixin.mq("pc") {
+    display: none;
+  }
+}
+.page-map{
+  margin-top: 24px;
+}

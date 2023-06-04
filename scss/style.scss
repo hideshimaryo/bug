@@ -1,0 +1,168 @@
+@use "foundation/base";
+@use "foundation/color";
+@use "foundation/font";
+@use "foundation/mixin";
+@use "foundation/header";
+@use "foundation/footer";
+@use "foundation/top";
+@use "foundation/about";
+@use "foundation/company";
+@use "foundation/service";
+@use "foundation/contact";
+
+@use "sass:math";
+
+// 革工房ページーーーー
+.lether_bg{
+  background-image: url(/images/lether.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(/images/koubou.jpg);
+  }
+}
+
+.lether img{
+  width: 156px;
+  position: absolute;
+  top: 40px;
+  right: 76px;
+  @include mixin.mq("sp") {
+    width: 88px;
+    top: 12px;
+    right:16px;
+  }
+}
+
+.price-bord {
+  text-align: center;
+  margin: 60px auto 0;
+}
+th {
+  background: color.$c-background;
+  border: solid 1px #ccc;
+  color: #fff;
+  padding: 10px;
+}
+td {
+  border: solid 1px #ccc;
+  padding: 10px;
+}
+
+
+
+
+// 雑貨販売固定ページーーーーーーーー
+.goods_bg{
+  background-image: url(/images/service_zakka.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(/images/zakka.jpg);
+  }
+}
+
+.goods img{
+  width: 156px;
+  position: absolute;
+  top: 40px;
+  right: 76px;
+  @include mixin.mq("sp") {
+    width: 88px;
+    top: 42px;
+    right:12px;
+  }
+}
+
+// 古着販売ーーーーーー
+.blog-archive_bg{
+  background-image: url(/images/blog.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(/images/mobile-buy-bike.jpg);
+  }
+}
+
+// ブログアーカイブーーーー
+.blog-archive_inner{
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.blog-archive-padding{
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.page-cont ul li:first-child{
+  margin-top: 64px;
+  @include mixin.mq("sp") {
+    margin-top: 32px;
+  }
+}
+
+.pagenation{
+  text-align: center;
+}
+
+// ブログ記事ーーーーー
+.blog_bg{
+  background-image: url(/images/blog.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(/images/mobile-buy-bike.jpg);
+  }
+}
+
+.blog-heading{
+  font-weight: bold;
+  @include mixin.font-size(32);
+  color: color.$c-background;
+  line-height: 1.7;
+}
+
+.eye-catch{
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+// ハンドメイド作家さんへーーー
+.handmader_bg{
+  background-image: url(/images/handmade1.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(/images/mobile_handmader.jpg);
+  }
+}
+
+.handmader img{
+  width: 156px;
+  position: absolute;
+  top: 40px;
+  right: 76px;
+  @include mixin.mq("sp") {
+    width: 88px;
+    top: 24px;
+    right:0px;
+  }
+}
+
+// ニュースアーカイブーーー
+.archive_news_bg{
+  background-image: url(/images/archive_news.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(/images/mobile_archive_news.jpg);
+  }
+}
+
+.archive_news li:first-child{
+  display: none;
+}
+
+// プライバシーポリシーーーー
+.privacy-policy_bg{
+  background-image: url(/images/privacy.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(/images/mobile_privacy.jpg);
+  }
+}
+
+.privacy-policy{
+  text-align: center;
+  a{
+    color: #1737ab;
+  }
+}

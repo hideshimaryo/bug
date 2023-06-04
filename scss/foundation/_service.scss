@@ -1,0 +1,101 @@
+@use "../foundation/mixin";
+@use "../foundation/color";
+@use "../foundation/font";
+@use "sass:math";
+
+
+.service_bg{
+  background-image: url(/images/service.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(/images/mobile_service.jpg);
+  }
+}
+@include mixin.mq("pc") {
+.service_archive .page-service-item:nth-child(even){
+  flex-direction: row-reverse
+}
+}
+
+@include mixin.mq("pc") {
+.service_archive .page-service-item:nth-child(even) .service-text{
+  left: 0;
+}
+}
+.service-heading{
+  @include mixin.font-size(24);
+  color: color.$c-background;
+  font-weight: bold;
+}
+
+.page-service-item{
+  position: relative;
+  display: flex;
+  @include mixin.mq("sp") {
+    flex-direction: column-reverse;
+  }
+
+}
+
+.page-service_img{
+  width: 52%;
+  @include mixin.mq("sp") {
+    width: 100%;
+  }
+}
+
+.page-service_img_bg{
+  width: 100%;
+  height: 363px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 20px;
+  @include mixin.mq("sp") {
+    height: 214px;
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.page-buy-bike{
+  background-image: url(../images/service_bike.jpg);
+}
+.page-koubou{
+  background-image: url(../images/koubou.jpg);
+}
+.page-zakka{
+  background-image: url(../images/zakka.jpg);
+}
+.page-hurugi{
+  background-image: url(../images/hurugi.jpg);
+}
+
+.service-text{
+  position: absolute;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 24px 40px 32px;
+  width: 60%;
+  z-index: 10;
+  bottom: 0;
+  left: 355px;
+  p{
+    margin-bottom: 16px;
+  }
+  button a{
+    display: block;
+  }
+  @include mixin.mq("sp") {
+    position: static;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+.service-inner{
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.button-block{
+  text-align: right;
+}

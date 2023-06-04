@@ -1,0 +1,85 @@
+@use "../foundation/mixin";
+@use "../foundation/color";
+@use "../foundation/font";
+@use "sass:math";
+
+
+
+img{
+  width: 100%;
+}
+
+body{
+  font-family: 'Noto Sans JP';
+  font-weight: normal;
+  color: #333;
+  line-height: 2;
+  text-align: center;
+  position: relative;
+  &.open{
+    @include mixin.mq("sp") {
+    overflow: hidden;
+    }
+  }
+}
+
+.inner{
+  max-width: 940px;
+  margin: 0 auto;
+  @include mixin.mq("sp") {
+        max-width: 280px;
+      }
+}
+
+.footer-inner{
+  max-width: 940px;
+  margin: 0 auto;
+  @include mixin.mq("sp") {
+    padding: 0 6%;
+  }
+}
+
+.section-title{
+  font-weight: bold;
+  text-align: center;
+  @include mixin.font-size(32);
+  position: relative;
+}
+
+
+.heading {
+	position: relative;
+  display: inline-block;
+	@include mixin.font-size(26);
+}
+
+.heading::before {
+	content: attr(data-en);
+	position: absolute;
+	transform: rotate(-13deg);
+	top: -30px;
+	left: -80px;
+	color: #BA7000;
+  opacity: .3;
+	font-size: 32px;
+	font-weight: 400;
+	font-family: 'Pacifico', cursive;
+}
+
+
+.button{
+  border: 1px solid #333;
+  padding: 1em 2em;
+  border-radius: 40px;
+  @include mixin.font-size(12);
+  a{
+    display: block;
+  }
+  &:hover{
+    color: #fff;
+    background-color: color.$c-background;
+    border: none;
+  }
+}
+
+

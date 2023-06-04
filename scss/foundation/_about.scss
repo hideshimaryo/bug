@@ -1,0 +1,136 @@
+@use "../foundation/mixin";
+@use "../foundation/color";
+@use "../foundation/font";
+@use "sass:math";
+
+// about us-----
+.page-top-view{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  @include mixin.mq("sp") {
+  height: 240px;
+  padding-top: 82px;
+  }
+}
+
+.about-us_bg{
+  background-image: url(/images/news.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(/images/mobil_aboutus.jpg);
+  }
+}
+
+.page-title{
+  @include mixin.font-size(42);
+  text-align: left;
+  padding-top: 55px;
+  padding-left: 83px;
+  @include mixin.mq("sp") {
+    background-color: rgba(255,255,255,0.75);
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 20px;
+    line-height: 1;
+    @include mixin.font-size(28);
+
+    }
+}
+
+.Breadcrumb{
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 14%;
+  background-color: rgba(109,52,33,0.1);
+  width: 60%;
+  border-radius: 0 20px 20px 0;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  @include mixin.font-size(12);
+  color: #555;
+  @include mixin.mq("sp") {
+    width: 90%;
+    @include mixin.font-size(10);
+  }
+}
+
+.page-cont{
+  background-color: rgba(109,52,33,0.2);
+  text-align: left;
+  @include mixin.mq("sp") {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+.page-box{
+  background-color: #fff;
+  max-width: 920px;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 64px 80px;
+  position: relative;
+  @include mixin.mq("sp") {
+    padding: 32px 16px;
+  }
+}
+
+.page-heading{
+  color: color.$c-background;
+  @include mixin.font-size(32);
+  font-weight: bold;
+  line-height: 55px;
+  margin-bottom: 48px;
+  @include mixin.mq("sp") {
+    @include mixin.font-size(24);
+    line-height: 38px;
+  }
+}
+
+.mobile_br{
+  @include mixin.mq("pc") {
+  display: none;
+  }
+}
+
+.about-bug img{
+  width: 245px;
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  @include mixin.mq("sp") {
+    width: 100px;
+    top: 29px;
+    right: 16px;
+  }
+}
+
+.page-cont img{
+}
+
+.page-cont ul li:nth-child(n + 2){
+  margin-top: 64px;
+  @include mixin.mq("sp") {
+    margin-top: 32px;
+  }
+}
+
+.name{
+  margin-top: 48px;
+  text-align: right;
+}
+
+.greeting img{
+  width: 217px;
+  position: absolute;
+  top: -16px;
+  right: 24px;
+  @include mixin.mq("sp") {
+    width: 100px;
+    top: 10px;
+  }
+}

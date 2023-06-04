@@ -1,0 +1,82 @@
+@use "../foundation/mixin";
+@use "../foundation/color";
+@use "../foundation/font";
+@use "sass:math";
+
+
+
+
+// フッターーーーーーー
+
+.footer-cont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  padding-left: 48px;
+  @include mixin.mq("sp") {
+    display: block;
+    padding-left: 0;
+  }
+}
+
+.logo{
+  width: 85px;
+  &:hover{
+    opacity: .8;
+  }
+}
+.sns-icon{
+  width: 42px;
+  margin-left: 32px;
+  margin-right: 24px;
+  &:hover{
+    opacity: .8;
+  }
+}
+
+.footer-left{
+  display: flex;
+  align-items: center;
+  @include mixin.mq("sp") {
+    justify-content: center;
+  }
+}
+
+.footer-nav{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: left;
+  @include mixin.mq("sp") {
+    text-align: center;
+  }
+  .footer-nav-item{
+    width: 30%;
+    margin-left: 8px;
+    padding-left: 16px;
+    border-left: 1px solid #999999;
+    &:nth-child(odd){
+      @include mixin.mq("sp") {
+        // margin-left: 0;
+        // padding-left: 0;
+        width: 50%;
+      }
+    }
+    &:nth-child(even){
+      @include mixin.mq("sp") {
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+    @include mixin.mq("sp") {
+      width: 46%;
+      border: none;
+      @include mixin.font-size(10);
+      margin-top: 12px;
+    }
+    &:hover{
+      opacity: .8;
+    }
+  }
+}

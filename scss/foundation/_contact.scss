@@ -1,0 +1,185 @@
+@use "../foundation/mixin";
+@use "../foundation/color";
+@use "../foundation/font";
+@use "sass:math";
+
+
+
+// お問い合わせページーーー
+
+.page-contact_bg{
+  background-image: url(/images/contact.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(/images/mobile_contact.jpg);
+  }
+}
+.page-contact_title{
+  text-align: center;
+}
+
+.Form {
+  text-align: left;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  @include mixin.mq("sp") {
+    margin-top: 40px;
+  }
+}
+.Form-Item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  @include mixin.mq("sp") {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  
+}
+
+.Form-Item:nth-child(5) {
+
+}
+.Form-Item-Label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  @include mixin.mq("sp") {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+}
+.Form-Item-Label.isMsg {
+  margin-top: 8px;
+  margin-bottom: auto;
+  @include mixin.mq("sp") {
+    margin-top: 0;
+  }
+}
+
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #FBA79E;
+  color: #fff;
+  font-size: 12px;
+  @include mixin.mq("sp") {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+  }
+}
+
+.Form-Item-Input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, .1);
+  @include mixin.mq("sp") {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, .1);
+  @include mixin.mq("sp") {
+    margin-top: 18px;
+    margin-left: 0;
+    height: 200px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+
+.Form-Btn {
+  text-align: center;
+  border-radius: 40px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em 3em;
+  display: block;
+  letter-spacing: 0.05em;
+  border: 1px solid color.$c-background;;
+  color: color.$c-background;
+  font-weight: bold;
+  font-size: 12px;
+  &:hover{
+    background-color: color.$c-background;
+    color: #fff;
+  }
+  @include mixin.mq("sp") {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    font-size: 16px;
+  }
+}
+
+.opacity{
+  opacity: 0;
+}
+
+/* 送信ボタン */
+.submit-btn {
+  /* buttonタグのリセットCSS */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  color: color.$c-background;
+  border: 1px solid color.$c-background;
+  padding: 8px 24px;
+  background-color: #fff;
+  cursor: pointer; /* ポインターカーソルを表示 */
+}
+
+.submit-btn[disabled] {
+  color: #fff;
+  background-color: #ccc;
+  border: none;
+  cursor: not-allowed; /* クリック不可のカーソルを表示 */
+}
+
+.privacy-policy{
+  text-align: center;
+  margin-bottom: 16px;
+}
+.agree{
+  text-align: center;
+}

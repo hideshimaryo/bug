@@ -1,0 +1,129 @@
+@use "../foundation/mixin";
+@use "../foundation/color";
+@use "../foundation/font";
+@use "sass:math";
+
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
+  @include mixin.font-size(14);
+  @include mixin.mq('sp'){
+    padding-left: 16px;
+  }
+}
+
+.site-title{
+  width: 69px;
+  &:hover{
+    opacity: .8;
+  }
+}
+
+.nav-menu{
+  display: flex;
+  @include mixin.mq('sp'){
+    flex-direction: column;
+    color: #fff;
+  }
+}
+
+
+.menu-list{
+  margin-right: 16px;
+  & a{
+    position: relative;
+  }
+  & a::after{
+    position: absolute;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: color.$c-background;
+      bottom: -5px;
+      transform: scale(0, 1);
+      transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+      transition: transform 0.3s;   /*変形の時間*/
+  }
+  & a:hover::after{
+    transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+  }
+  @include mixin.mq('sp'){
+    margin-top: 40px;
+    font-weight: bold;
+    @include mixin.font-size(24);
+  }
+}
+#drawer_toggle {
+  display: none;
+}
+
+// ヘッダーモバイルーーーーーーーーー
+@include mixin.mq('sp'){
+#global_nav{
+  box-sizing: border-box;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 100vh;
+    background: color.$c-background;
+    // opacity: 0.9;
+    /* 3. スライドメニューの場合 */
+    right: -100%;
+    transition: right .2s;
+}
+#global_nav.sp_open{
+  right: 0;
+  z-index: 100;
+}
+
+
+#drawer_toggle {
+  z-index: 200;
+box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+#drawer_toggle span {
+  position: absolute;
+  top: 29px;
+  left: 17px;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #666;
+  vertical-align: top;
+}
+#drawer_toggle span:nth-child(2) {
+  margin-top: 10px;
+}
+#drawer_toggle span:last-child {
+  margin-top: 20px;
+}
+#drawer_toggle.open span {
+  top: 39px;
+  left: 14px;
+  width: 35px;
+  margin: 0;
+}
+#drawer_toggle.open span:first-child {
+  transform: rotate(45deg);
+}
+#drawer_toggle.open span:nth-child(2) {
+  display: none;
+}
+#drawer_toggle.open span:last-child {
+  transform: rotate(-45deg);
+}
+}

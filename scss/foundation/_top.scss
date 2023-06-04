@@ -1,0 +1,243 @@
+@use "../foundation/mixin";
+@use "../foundation/color";
+@use "../foundation/font";
+@use "sass:math";
+
+// ファーストビューーーーーーー
+.fv{
+  background-image: url(/images/MVkey-visual.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 650px;
+  @include mixin.mq("sp") {
+    background-image: url(/images/mainvisual_mobile.jpg);
+    object-fit: cover;
+  }
+}
+
+// アバウトセクションーーーーーーーーーーーーー
+.section-padding{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include mixin.mq("sp") {
+    padding-top: 64px;
+  padding-bottom: 64px;
+  }
+}
+.about{
+  @include mixin.mq("sp") {
+    padding-left: 10%;
+    padding-right: 10%;
+
+  }
+}
+
+.about p{
+  max-width: 680px;
+  margin: 0 auto;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  text-align: left;
+  letter-spacing: 8px;
+}
+
+
+// ニュースセクションーーーーー
+.news{
+  background-color: color.$c-top_background;
+
+}
+
+.news-list{
+  margin: 56px 0 38px;
+  padding: 0;
+}
+.news-list .item a{
+  display: flex;
+  // flex-wrap: wrap;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #CCC;
+  padding: 20px 20px;
+  @include mixin.mq("sp") {
+    display: initial;
+    border: none;
+  }
+}
+.news-list .item:first-child a{
+  border-top: 1px solid #CCC;
+  @include mixin.mq("sp") {
+    border: none;
+  }
+}
+.news-list .item .date{
+  margin: 0;
+  min-width: 140px;
+  font-size: 16px;
+  padding: 0 20px 0 0;
+  @include mixin.mq("sp") {
+    display: inline-block;
+    @include mixin.font-size(10);
+  }
+}
+.news-list .item .category{
+  margin: 0;
+  min-width: 140px;
+  padding: 0 20px 0 0;
+  @include mixin.mq("sp") {
+    display: inline-block;
+  }
+}
+.news-list .item .category span{
+  background: rgba(250,210,152,0.8);
+  text-align: center;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 20px;
+  @include mixin.mq("sp") {
+    @include mixin.font-size(8);
+  }
+}
+.news-list .item .title{
+  margin: 0;
+  width: 100%;
+  @include mixin.mq("sp") {
+    text-align: left;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 20px;
+    @include mixin.font-size(14);
+  }
+}
+.news-list .item a:hover .title{
+  color: color.$c-main;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px){
+.news-list .item a{
+  flex-wrap: wrap;
+}
+.news-list .item .date{
+  min-width: 100px;
+}
+.news-list .item .title{
+  margin-top: 10px;
+}
+}
+
+// サービスセクションーーーーーー
+.service .section-title{
+  margin-bottom: 56px;
+}
+.service-list{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  @include mixin.mq("sp") {
+    flex-direction: column;
+  }
+}
+
+.service-item {
+  position: relative;
+  display: block;
+  width: 47%;
+  margin-bottom: 56px;
+  transition: transform .1s ease;
+  @include mixin.mq("sp") {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1em;
+  border-radius: 20px;
+}
+
+// .text-overlay p {
+//   color: black;
+//   font-size: 18px;
+//   @include mixin.font-size(12);
+// }
+
+.service-item p{
+  color: color.$c-main;
+  font-weight: bold;
+  @include mixin.font-size(18);
+}
+
+// ブログセクションーーーーーーー
+.blog{
+  background-color: color.$c-top_background;
+  .section-title{
+    margin-bottom: 56px;
+  }
+}
+
+.blog-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  // margin-top: 56px;
+  margin-bottom: 56px;
+  @include mixin.mq("sp") {
+    justify-content: center;
+  }
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 2px 2px rgba(0,0,0, 0.1);
+  @include mixin.mq("sp") {
+    margin-bottom: 32px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  
+}
+
+.blog-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+}
+
+.blog-content {
+  padding: 24px 16px 24px 12px;
+  text-align: left;
+  .button-container{
+    text-align: right;
+  }
+  
+}
+
+.blog-date {
+
+}
+
+.blog-text {
+  font-weight: bold;
+  color: color.$c-main;
+  margin-bottom: 12px;
+}
