@@ -1,3 +1,4 @@
+jQuery(function($){
 
 $(function(){
 	$("#drawer_toggle").click(function(){
@@ -6,4 +7,4 @@ $(function(){
     $("#global_nav").toggleClass("sp_open");
   });
 });
-
+});

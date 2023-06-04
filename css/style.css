@@ -266,7 +266,6 @@ body {
   width: 30%;
   margin-left: 8px;
   padding-left: 16px;
-  border-left: 1px solid #999999;
 }
 @media (max-width: 855px) {
   .footer-nav .footer-nav-item:nth-child(odd) {
@@ -293,7 +292,7 @@ body {
 }
 
 .fv {
-  background-image: url(/images/MVkey-visual.jpg);
+  background-image: url(../images/MVkey-visual.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -302,7 +301,7 @@ body {
 }
 @media (max-width: 855px) {
   .fv {
-    background-image: url(/images/mainvisual_mobile.jpg);
+    background-image: url(../images/mainvisual_mobile.jpg);
     -o-object-fit: cover;
        object-fit: cover;
   }

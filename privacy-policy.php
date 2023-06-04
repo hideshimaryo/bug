@@ -1,46 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@700&display=swap" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.4.min.js" 
-integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-    
-  <link rel="stylesheet" href="css/style.css">
-</head>
-  <body>
-    <header class="header">
-      <h1 class="site-title">
-        <div class="img"><a href="/"><img src="images/logo.svg" alt=""></a></div>
-      </h1>
-
-      <div id="drawer_toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav id="global_nav">
-        <ul class="nav-menu">
-          <li class="menu-list"><a href="#">Bugについて</a></li>
-          <li class="menu-list"><a href="#">会社概要</a></li>
-          <li class="menu-list"><a href="#">サービス一覧</a></li>
-          <li class="menu-list"><a href="#">ブログ一覧</a></li>
-          <li class="menu-list"><a href="#">ハンドメイド作家さんへ</a></li>
-          <li class="menu-list"><a href="#">お問い合わせ</a></li>
-        </ul>
-    </nav>
-    </header>
+<?php get_header(); ?>
     <main>
       <div class="privacy-policy_bg page-top-view">
         <p class="page-title">個人情報の<br class="mobile_br">取り扱いについて</p>
@@ -186,25 +144,4 @@ Eメールアドレス：bug@bug043.com
       </ul>
       </div>
     </main>
-    <footer class="footer section-padding">
-      <div class="inner">
-        <div class="footer-cont">
-        <div class="footer-left">
-        <div class="logo"><img src="images/logo.svg" alt=""></div>
-        <div class="sns-icon"><img src="images/logos_instagram-icon.svg" alt=""></div>
-      </div>
-      <div class="footer-right">
-        <ul class="footer-nav">
-          <li class="footer-nav-item"><a href="#">Bugについて</a></li>
-          <li class="footer-nav-item"><a href="#">会社概要</a></li>
-          <li class="footer-nav-item"><a href="#">サービス一覧</a></li>
-          <li class="footer-nav-item"><a href="#">ブログ一覧</a></li>
-          <li class="footer-nav-item"><a href="#">ハンドメイド作家さんへ</a></li>
-          <li class="footer-nav-item"><a href="#">お問い合わせ</a></li>
-        </ul>
-      </div>
-    </div>
-      <small>©  Bug Co.Ltd. All rights reserved.</small>
-      </div>
-    </footer>
-  </html>
+    <?php get_footer(); ?>
