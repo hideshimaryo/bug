@@ -3,17 +3,22 @@
       <div class="about-us_bg page-top-view">
         <p class="page-title">Bugについて</p>
       </div>
-      <div class="Breadcrumb">
-        TOPページ  >  Bugについて
-      </div>
+
+
+      <div class="Breadcrumb" typeof="BreadcrumbList" vocab="//schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
 
       <div class="page-cont section-padding">
         <ul>
-        <li class="about-bug page-box">
+        <li class="about-bug page-box wow animated fadeIn" data-wow-duration="2s">
           <h2 class="page-heading">
             好きな仕事を<br>好きな人と<br class="mobile_br">好きな人のために
           </h2>
-          <img src="images/page-bike.svg" alt="" class="page-image">
+          <img src="<?php echo get_theme_file_uri( 'images/page-bike.svg' ); ?>" alt="" class="page-image">
           <p>
             Bugの主軸は1970年代のビンテージハーレーの販売です。
             他にも国産車のTLシリーズやSRなどの古臭いけれども遊び心があった時代のバイクのものを大切にしていきたいと考えています。
@@ -32,11 +37,11 @@
           </p>
         </li>
 
-        <li class="greeting page-box">
+        <li class="greeting page-box wow animated fadeIn" data-wow-duration="2s">
           <h2 class="page-heading">
             代表挨拶
           </h2>
-          <img src="images/daihyouaisatsu.svg" alt="" class="page-image">
+          <img src="<?php echo get_theme_file_uri( 'images/daihyouaisatsu.svg' ); ?>" alt="" class="page-image">
           <p>
             小さなガレージでバイクカスタム、修理を趣味で続けて海外からハーレーを買付整備と国内登録をおこなっていました。
           </p>

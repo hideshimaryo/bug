@@ -2,8 +2,8 @@
     <div class="footer-inner">
       <div class="footer-cont">
       <div class="footer-left">
-      <div class="logo"><img src="<?php echo get_theme_file_uri( 'images/logo.svg' ); ?>" alt="会社ロゴ"></div>
-      <div class="sns-icon"><img src="<?php echo get_theme_file_uri( 'images/logos_instagram-icon.svg' ); ?>" alt="Instagramのアイコン"></div>
+      <div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_theme_file_uri( 'images/logo.svg' ); ?>" alt="会社ロゴ"></a></div>
+      <div class="sns-icon"><a href="//www.instagram.com/bug043/"><img src="<?php echo get_theme_file_uri( 'images/logos_instagram-icon.svg' ); ?>" alt="Instagramのアイコン"></a></div>
     </div>
     <div class="footer-right">
     
@@ -24,6 +24,10 @@
     <small>©  Bug Co.Ltd. All rights reserved.</small>
     </div>
   </footer>
+  <script>
+new WOW().init();
+</script>
   <?php wp_footer(); ?>
+  
   </body>
 </html>

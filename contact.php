@@ -3,13 +3,16 @@
       <div class="page-contact_bg page-top-view">
         <p class="page-title">お問い合わせ</p>
       </div>
-      <div class="Breadcrumb">
-        TOPページ  >  お問い合わせ
-      </div>
+      <div class="Breadcrumb" typeof="BreadcrumbList" vocab="//schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
 
       <div class="page-cont section-padding">
         <ul>
-        <li class="page-contact page-box page-contact_title">
+        <li class="page-contact page-box page-contact_title wow animated fadeIn" data-wow-duration="2s">
           <h2 class="page-heading page-heading_contact">
             お問い合わせ
           </h2>

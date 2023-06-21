@@ -3,13 +3,16 @@
       <div class="privacy-policy_bg page-top-view">
         <p class="page-title">個人情報の<br class="mobile_br">取り扱いについて</p>
       </div>
-      <div class="Breadcrumb">
-        TOPページ  >  お問い合わせ > 個人情報の取り扱いについて
-      </div>
+      <div class="Breadcrumb" typeof="BreadcrumbList" vocab="//schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
 
       <div class="page-cont section-padding">
         <ul>
-        <li class="privacy-policy page-box">
+        <li class="privacy-policy page-box wow animated fadeIn" data-wow-duration="2s">
           <h2 class="page-heading">
             プライバシーポリシー
           </h2>

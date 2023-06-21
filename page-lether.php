@@ -3,17 +3,20 @@
       <div class="lether_bg page-top-view">
         <p class="page-title">革工房</p>
       </div>
-      <div class="Breadcrumb">
-        TOPページ  >  サービス一覧 > 革工房
-      </div>
+      <div class="Breadcrumb" typeof="BreadcrumbList" vocab="//schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
 
       <div class="page-cont section-padding">
         <ul>
-        <li class="lether page-box">
+        <li class="lether page-box wow animated fadeIn" data-wow-duration="2s">
           <h2 class="page-heading">
             あなただけの<br class="mobile_br">一品を製作します
           </h2>
-          <img src="images/service_lether.svg" alt="" class="page-image">
+          <img src="<?php echo get_theme_file_uri( 'images/service_lether.svg' ); ?>" alt="" class="page-image">
           <p>
             Bugではバイク小物作成と共に、デザインフェスタへ参加するなど、日常生活でクスッとできるようなアイテムを作成しております。他、レザークラフトスクールは一律で1h千円でおこなっています。
             </p>

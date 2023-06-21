@@ -5,9 +5,9 @@
 
 
 .service_bg{
-  background-image: url(/images/service.jpg);
+  background-image: url(../images/service.jpg);
   @include mixin.mq("sp") {
-  background-image: url(/images/mobile_service.jpg);
+  background-image: url(../images/mobile_service.jpg);
   }
 }
 @include mixin.mq("pc") {

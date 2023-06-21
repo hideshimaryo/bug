@@ -4,17 +4,20 @@
       <div class="company_bg page-top-view">
         <p class="page-title">会社概要</p>
       </div>
-      <div class="Breadcrumb">
-        TOPページ  >  会社概要
-      </div>
+      <div class="Breadcrumb" typeof="BreadcrumbList" vocab="//schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
 
       <div class="page-cont section-padding">
         <ul>
-        <li class="page-company page-box">
+        <li class="page-company page-box wow animated fadeIn" data-wow-duration="2s">
           <h2 class="page-heading">
            会社概要
           </h2>
-          <img src="images/company.svg" alt="" class="page-image">
+          <img src="<?php echo get_theme_file_uri( 'images/company.svg' ); ?>" alt="" class="page-image">
           <dl>
             <dt>会社名</dt>
             <dd>Bug</dd>
@@ -27,11 +30,11 @@
           </dl>
         </li>
 
-        <li class="access page-box">
+        <li class="access page-box wow animated fadeIn" data-wow-duration="2s">
           <h2 class="page-heading">
             アクセス
           </h2>
-          <img src="images/access.svg" alt="" class="page-image">
+          <img src="<?php echo get_theme_file_uri( 'images/access.svg' ); ?>" alt="" class="page-image">
           <p>
             千葉県千葉市若葉区大宮台6-3-8
           </p>

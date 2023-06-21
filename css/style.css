@@ -406,6 +406,14 @@ body {
   }
 }
 
+.news-list .item .category .category-event {
+  background: rgba(255, 235, 129, 0.7);
+}
+
+.news-list .item .category .category-new {
+  background: rgba(152, 238, 250, 0.7);
+}
+
 .news-list .item .title {
   margin: 0;
   width: 100%;
@@ -526,9 +534,11 @@ body {
 }
 
 .blog-image {
-  width: 100%;
-  height: auto;
+  width: 258px;
+  height: 140px;
   border-radius: 20px 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .blog-content {
@@ -543,6 +553,10 @@ body {
   font-weight: bold;
   color: #4C4400;
   margin-bottom: 12px;
+}
+
+.footer-nav-item:nth-child(5) {
+  font-size: 13px;
 }
 
 .page-top-view {
@@ -560,11 +574,11 @@ body {
 }
 
 .about-us_bg {
-  background-image: url(/images/news.jpg);
+  background-image: url(../images/news.jpg);
 }
 @media (max-width: 855px) {
   .about-us_bg {
-    background-image: url(/images/mobil_aboutus.jpg);
+    background-image: url(../images/mobil_aboutus.jpg);
   }
 }
 
@@ -713,11 +727,11 @@ body {
 }
 
 .company_bg {
-  background-image: url(/images/company.jpg);
+  background-image: url(../images/company.jpg);
 }
 @media (max-width: 855px) {
   .company_bg {
-    background-image: url(/images/mobile_company.jpg);
+    background-image: url(../images/mobile_company.jpg);
   }
 }
 
@@ -782,11 +796,11 @@ body {
 }
 
 .service_bg {
-  background-image: url(/images/service.jpg);
+  background-image: url(../images/service.jpg);
 }
 @media (max-width: 855px) {
   .service_bg {
-    background-image: url(/images/mobile_service.jpg);
+    background-image: url(../images/mobile_service.jpg);
   }
 }
 
@@ -891,11 +905,11 @@ body {
 }
 
 .page-contact_bg {
-  background-image: url(/images/contact.jpg);
+  background-image: url(../images/contact.jpg);
 }
 @media (max-width: 855px) {
   .page-contact_bg {
-    background-image: url(/images/mobile_contact.jpg);
+    background-image: url(../images/mobile_contact.jpg);
   }
 }
 
@@ -1087,12 +1101,20 @@ body {
   text-align: center;
 }
 
+.agree p {
+  display: flex;
+  justify-content: center;
+}
+.agree p label {
+  margin-left: 8px;
+}
+
 .lether_bg {
-  background-image: url(/images/lether.jpg);
+  background-image: url(../images/lether.jpg);
 }
 @media (max-width: 855px) {
   .lether_bg {
-    background-image: url(/images/koubou.jpg);
+    background-image: url(../images/koubou.jpg);
   }
 }
 
@@ -1128,11 +1150,11 @@ td {
 }
 
 .goods_bg {
-  background-image: url(/images/service_zakka.jpg);
+  background-image: url(../images/service_zakka.jpg);
 }
 @media (max-width: 855px) {
   .goods_bg {
-    background-image: url(/images/zakka.jpg);
+    background-image: url(../images/zakka.jpg);
   }
 }
 
@@ -1151,11 +1173,35 @@ td {
 }
 
 .blog-archive_bg {
-  background-image: url(/images/blog.jpg);
+  background-image: url(../images/blog.jpg);
 }
 @media (max-width: 855px) {
   .blog-archive_bg {
-    background-image: url(/images/mobile-buy-bike.jpg);
+    background-image: url(../images/mobile-buy-bike.jpg);
+  }
+}
+
+.clothes_bg {
+  background-image: url(../images/blog.jpg);
+}
+@media (max-width: 855px) {
+  .clothes_bg {
+    background-image: url(../images/mobile-buy-bike.jpg);
+  }
+}
+
+.clothes img {
+  z-index: -1;
+  width: 100px;
+  position: absolute;
+  top: 42px;
+  right: 40px;
+}
+@media (max-width: 855px) {
+  .clothes img {
+    width: 56px;
+    top: 32px;
+    right: 12px;
   }
 }
 
@@ -1183,11 +1229,11 @@ td {
 }
 
 .blog_bg {
-  background-image: url(/images/blog.jpg);
+  background-image: url(../images/blog.jpg);
 }
 @media (max-width: 855px) {
   .blog_bg {
-    background-image: url(/images/mobile-buy-bike.jpg);
+    background-image: url(../images/mobile-buy-bike.jpg);
   }
 }
 
@@ -1205,11 +1251,11 @@ td {
 }
 
 .handmader_bg {
-  background-image: url(/images/handmade1.jpg);
+  background-image: url(../images/handmade1.jpg);
 }
 @media (max-width: 855px) {
   .handmader_bg {
-    background-image: url(/images/mobile_handmader.jpg);
+    background-image: url(../images/mobile_handmader.jpg);
   }
 }
 
@@ -1228,11 +1274,11 @@ td {
 }
 
 .archive_news_bg {
-  background-image: url(/images/archive_news.jpg);
+  background-image: url(../images/archive_news.jpg);
 }
 @media (max-width: 855px) {
   .archive_news_bg {
-    background-image: url(/images/mobile_archive_news.jpg);
+    background-image: url(../images/mobile_archive_news.jpg);
   }
 }
 
@@ -1240,12 +1286,16 @@ td {
   display: none;
 }
 
+.archive_news {
+  margin-bottom: 56px;
+}
+
 .privacy-policy_bg {
-  background-image: url(/images/privacy.jpg);
+  background-image: url(../images/privacy.jpg);
 }
 @media (max-width: 855px) {
   .privacy-policy_bg {
-    background-image: url(/images/mobile_privacy.jpg);
+    background-image: url(../images/mobile_privacy.jpg);
   }
 }
 
@@ -1254,5 +1304,83 @@ td {
 }
 .privacy-policy a {
   color: #1737ab;
+}
+
+.archive_news .title {
+  padding-left: 20px;
+}
+
+.eye-catch img {
+  width: 760px;
+  height: 458px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 40px;
+}
+
+.bike-support img {
+  position: absolute;
+  width: 120px;
+  top: 64px;
+  right: 80px;
+}
+@media (max-width: 855px) {
+  .bike-support img {
+    width: 88px;
+    top: 32px;
+    right: 12px;
+  }
+}
+
+.buy-bike_bg {
+  background-image: url(../images/buy-bike.jpg);
+}
+@media (max-width: 855px) {
+  .buy-bike_bg {
+    background-image: url(../images/mobile-buy-bike.jpg);
+  }
+}
+
+.wp-pagenavi {
+  clear: both;
+  text-align: center;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+  color: #6D3421;
+  background-color: #FFFFFF;
+  padding: 8px 15px;
+  margin: 0 2px;
+  white-space: nowrap;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  border: thin dotted #6D3421;
+}
+
+.wp-pagenavi a:hover {
+  color: #fff;
+  background-color: #6D3421;
+}
+
+.wp-pagenavi span.current {
+  color: #fff;
+  background-color: #6D3421;
+}
+
+.paginavi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev, .next {
+  padding: 20px 20px 0;
+}
+
+.blog-card img {
+  border-radius: 20px 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */

@@ -3,17 +3,20 @@
       <div class="buy-bike_bg page-top-view">
         <p class="page-title">バイク販売</p>
       </div>
-      <div class="Breadcrumb">
-        TOPページ  >  サービス一覧 > バイク販売
-      </div>
+      <div class="Breadcrumb" typeof="BreadcrumbList" vocab="//schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
 
       <div class="page-cont section-padding">
         <ul>
-        <li class="bike-support page-box">
+        <li class="bike-support page-box wow animated fadeIn" data-wow-duration="2s">
           <h2 class="page-heading">
             バイク選びを<br class="mobile_br">徹底サポート
           </h2>
-          <img src="images/service-bike.svg" alt="" class="page-image">
+          <img src="<?php echo get_theme_file_uri( 'images/service-bike.svg' ); ?>" alt="" class="page-image">
           <p>
             「決まった予算からバイクを探します」
             </p>

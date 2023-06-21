@@ -14,9 +14,9 @@
 
 // 革工房ページーーーー
 .lether_bg{
-  background-image: url(/images/lether.jpg);
+  background-image: url(../images/lether.jpg);
   @include mixin.mq("sp") {
-  background-image: url(/images/koubou.jpg);
+  background-image: url(../images/koubou.jpg);
   }
 }
 
@@ -52,9 +52,9 @@ td {
 
 // 雑貨販売固定ページーーーーーーーー
 .goods_bg{
-  background-image: url(/images/service_zakka.jpg);
+  background-image: url(../images/service_zakka.jpg);
   @include mixin.mq("sp") {
-  background-image: url(/images/zakka.jpg);
+  background-image: url(../images/zakka.jpg);
   }
 }
 
@@ -72,11 +72,30 @@ td {
 
 // 古着販売ーーーーーー
 .blog-archive_bg{
-  background-image: url(/images/blog.jpg);
+  background-image: url(../images/blog.jpg);
   @include mixin.mq("sp") {
-  background-image: url(/images/mobile-buy-bike.jpg);
+  background-image: url(../images/mobile-buy-bike.jpg);
   }
 }
+.clothes_bg{
+  background-image: url(../images/blog.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(../images/mobile-buy-bike.jpg);
+  }
+}
+.clothes img{
+  z-index: -1;
+  width: 100px;
+  position: absolute;
+  top: 42px;
+    right:40px;
+    @include mixin.mq("sp") {
+      width: 56px;
+      top: 32px;
+      right:12px;
+}
+}
+
 
 // ブログアーカイブーーーー
 .blog-archive_inner{
@@ -102,9 +121,9 @@ td {
 
 // ブログ記事ーーーーー
 .blog_bg{
-  background-image: url(/images/blog.jpg);
+  background-image: url(../images/blog.jpg);
   @include mixin.mq("sp") {
-  background-image: url(/images/mobile-buy-bike.jpg);
+  background-image: url(../images/mobile-buy-bike.jpg);
   }
 }
 
@@ -122,9 +141,9 @@ td {
 
 // ハンドメイド作家さんへーーー
 .handmader_bg{
-  background-image: url(/images/handmade1.jpg);
+  background-image: url(../images/handmade1.jpg);
   @include mixin.mq("sp") {
-  background-image: url(/images/mobile_handmader.jpg);
+  background-image: url(../images/mobile_handmader.jpg);
   }
 }
 
@@ -142,9 +161,9 @@ td {
 
 // ニュースアーカイブーーー
 .archive_news_bg{
-  background-image: url(/images/archive_news.jpg);
+  background-image: url(../images/archive_news.jpg);
   @include mixin.mq("sp") {
-  background-image: url(/images/mobile_archive_news.jpg);
+  background-image: url(../images/mobile_archive_news.jpg);
   }
 }
 
@@ -152,11 +171,18 @@ td {
   display: none;
 }
 
+.archive_news{
+  margin-bottom: 56px;
+}
+
+
+
+
 // プライバシーポリシーーーー
 .privacy-policy_bg{
-  background-image: url(/images/privacy.jpg);
+  background-image: url(../images/privacy.jpg);
   @include mixin.mq("sp") {
-  background-image: url(/images/mobile_privacy.jpg);
+  background-image: url(../images/mobile_privacy.jpg);
   }
 }
 
@@ -165,4 +191,78 @@ td {
   a{
     color: #1737ab;
   }
+}
+
+.archive_news .title{
+  padding-left: 20px;
+}
+
+.eye-catch img{
+  width: 760px;
+  height: 458px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.bike-support img{
+  position: absolute;
+  width: 120px;
+  top: 64px;
+  right: 80px;
+  @include mixin.mq("sp") {
+    width: 88px;
+    top: 32px;
+    right:12px;
+  }
+}
+
+.buy-bike_bg{
+  background-image: url(../images/buy-bike.jpg);
+  @include mixin.mq("sp") {
+  background-image: url(../images/mobile-buy-bike.jpg);
+  }
+}
+
+// ページネーションーーーー
+.wp-pagenavi {
+	clear: both;
+	text-align:center;
+
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	color: color.$c-background;
+	background-color: #FFFFFF;
+	padding: 8px 15px;
+	margin: 0 2px;
+	white-space: nowrap;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	text-align: center;
+	text-decoration: none;
+	border: thin dotted color.$c-background;
+}
+.wp-pagenavi a:hover{
+	color: #fff;
+	background-color: color.$c-background;
+    }
+.wp-pagenavi span.current{
+	color: #fff;
+	background-color: color.$c-background;
+    }
+
+.paginavi{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev,.next{
+  padding: 20px 20px 0;
+}
+
+.blog-card img{
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
 }

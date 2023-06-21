@@ -17,9 +17,9 @@
 }
 
 .about-us_bg{
-  background-image: url(/images/news.jpg);
+  background-image: url(../images/news.jpg);
   @include mixin.mq("sp") {
-  background-image: url(/images/mobil_aboutus.jpg);
+  background-image: url(../images/mobil_aboutus.jpg);
   }
 }
 

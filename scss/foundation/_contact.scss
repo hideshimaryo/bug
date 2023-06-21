@@ -8,9 +8,9 @@
 // お問い合わせページーーー
 
 .page-contact_bg{
-  background-image: url(/images/contact.jpg);
+  background-image: url(../images/contact.jpg);
   @include mixin.mq("sp") {
-  background-image: url(/images/mobile_contact.jpg);
+  background-image: url(../images/mobile_contact.jpg);
   }
 }
 .page-contact_title{
@@ -182,4 +182,12 @@
 }
 .agree{
   text-align: center;
+}
+
+.agree p{
+  display: flex;
+    justify-content: center;
+    label{
+      margin-left: 8px;
+    }
 }

@@ -17,9 +17,9 @@
 }
 
 .company_bg{
-  background-image: url(/images/company.jpg);
+  background-image: url(../images/company.jpg);
   @include mixin.mq("sp") {
-  background-image: url(/images/mobile_company.jpg);
+  background-image: url(../images/mobile_company.jpg);
   }
 }
 

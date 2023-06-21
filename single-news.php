@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <main>
       <div class="blog_bg page-top-view">
-        <p class="page-title">ブログ</p>
+        <p class="page-title">お知らせ</p>
       </div>
       <div class="Breadcrumb" typeof="BreadcrumbList" vocab="//schema.org/">
     <?php if(function_exists('bcn_display'))
@@ -22,8 +22,6 @@
           <div class="eye-catch">
           <?php if ( has_post_thumbnail() ) : ?>
         <?php the_post_thumbnail('medium'); ?>
-      <?php else : ?>
-        <img src="<?php echo get_template_directory_uri() . '/images/bike.jpg'; ?>" alt="ダミー画像">
       <?php endif; ?>
           </div>
           <p class="blog-p">
@@ -39,8 +37,6 @@
 <div class="next"><?php next_post_link('%link »', '次の記事へ'); ?></div>
 </div>
       </div>
-     
+      
     </main>
    <?php get_footer(); ?>
-
-   

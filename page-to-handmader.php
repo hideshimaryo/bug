@@ -3,17 +3,20 @@
       <div class="handmader_bg page-top-view">
         <p class="page-title">ハンドメイド<br class="mobile_br">作家さんへ</p>
       </div>
-      <div class="Breadcrumb">
-        TOPページ  >  ハンドメイド作家さんへ
-      </div>
+      <div class="Breadcrumb" typeof="BreadcrumbList" vocab="//schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
 
       <div class="page-cont section-padding">
         <ul>
-        <li class="handmader page-box">
+        <li class="handmader page-box wow animated fadeIn" data-wow-duration="2s">
           <h2 class="page-heading">
             ハンドメイド<br class="mobile_br">作家の皆さんへ
           </h2>
-          <img src="images/handmader.svg" alt="" class="page-image">
+          <img src="<?php echo get_theme_file_uri( 'images/handmader.svg' ); ?>" alt="" class="page-image">
           <p>
             Bugは、ハンドメイド作品のアイテムも扱っているお店です。
             </p>
